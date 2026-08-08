@@ -1,405 +1,683 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="format-detection" content="telephone=no,date=no,address=no,email=no">
   <meta name="x-apple-disable-message-reformatting">
-  <title>We're watching rates for you — rates.now</title>
-  <!--[if mso]>
-  <noscript>
-    <xml>
-      <o:OfficeDocumentSettings>
-        <o:PixelsPerInch>96</o:PixelsPerInch>
-      </o:OfficeDocumentSettings>
-    </xml>
-  </noscript>
-  <![endif]-->
+  <title>Your recent home loan options from Rates.now</title>
   <style>
-    /* ===== RESET ===== */
-    *, *::before, *::after { box-sizing: border-box; }
-    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body, table, td, a {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
     table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-    a { color: inherit; text-decoration: none; }
+    img { border: 0; display: block; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
 
-    /* ===== BASE ===== */
     body {
       margin: 0;
       padding: 0;
-      background-color: #eef2f7;
+      background-color: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
-    }
-
-    /* ===== MOBILE STYLES ===== */
-    @media only screen and (max-width: 600px) {
-      .email-shell { width: 100% !important; }
-      .email-body { padding: 0 !important; }
-      .content-wrap { padding: 24px 20px !important; }
-      .hero-headline { font-size: 24px !important; line-height: 1.3 !important; }
-      .hero-sub { font-size: 15px !important; }
-      .rate-card-grid { display: block !important; width: 100% !important; }
-      .rate-card { display: block !important; width: 100% !important; margin-bottom: 10px !important; }
-      .rate-card:last-child { margin-bottom: 0 !important; }
-      .cta-btn { font-size: 17px !important; padding: 16px 24px !important; }
-      .step-row { display: block !important; }
-      .step-icon-cell { display: block !important; margin-bottom: 8px; }
-      .lender-meta { display: block !important; }
-      .lender-stats { display: block !important; margin-top: 12px !important; }
-      .stat-item { display: inline-block !important; margin-right: 16px; }
     }
   </style>
 </head>
 
-<body style="margin:0; padding:0; background-color:#eef2f7;">
+<body style="margin:0;padding:0;background-color:#ffffff;">
 
-  <!-- Preheader (hidden preview text) -->
-  <div style="display:none; font-size:1px; color:#eef2f7; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">
-    Your rate alert is active. We'll notify you the moment a lender hits your target — here's what's happening right now.
-    &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+  <!-- ═══ PREHEADER ═══ -->
+  <div style="display:none;font-size:1px;color:#fff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+    Sreenivasan — your home loan options are ready. A mortgage professional will reach out shortly with personalized quotes.
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
   </div>
 
-  <!-- Outer wrapper -->
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#eef2f7;">
+  <!-- ═══ OUTER WRAPPER ═══ -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
     <tr>
-      <td align="center" style="padding: 32px 16px 40px;">
+      <td align="center" style="padding:24px 0 32px;">
 
-        <!-- Email shell -->
-        <table class="email-shell" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px; width:100%;">
+        <!-- ═══ EMAIL SHELL — 370px ═══ -->
+        <table role="presentation" width="370" cellspacing="0" cellpadding="0" border="0" style="max-width:370px;width:100%;">
 
-          <!-- ========== TOP NAV / BRAND ========== -->
+          <!-- ══════════ LOGO ══════════ -->
           <tr>
-            <td style="padding: 0 0 20px 0;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                <tr>
-                  <td>
-                    <!-- Logo / wordmark -->
-                    <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:22px; font-weight:800; color:#0f172a; letter-spacing:-0.5px;">
-                      rates<span style="color:#4f46e5;">.</span>now
-                    </span>
-                  </td>
-                  <td align="right">
-                    <a href="{{dashboard_url}}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:13px; font-weight:500; color:#4f46e5; text-decoration:none;">
-                      View Dashboard →
-                    </a>
-                  </td>
-                </tr>
-              </table>
+            <td align="center" style="padding:0 0 24px 0;">
+              <img src="VArateslogo.png" width="190" alt="VA rates.now" style="width:190px;height:auto;display:block;margin:0 auto;">
             </td>
           </tr>
 
-          <!-- ========== MAIN CARD ========== -->
+          <!-- ══════════ HERO TEXT ══════════ -->
           <tr>
-            <td style="background-color:#ffffff; border-radius:20px; overflow:hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07);">
+            <td align="center" style="padding:0 20px 20px;">
+              <h1 style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:24px;font-weight:800;color:#0f172a;line-height:1.25;letter-spacing:-0.4px;margin:0 0 14px 0;text-align:center;">
+                Thank you for your<br>submission!
+              </h1>
+              <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;color:#475569;line-height:1.65;text-align:center;margin:0;">
+                A mortgage professional from one of our participating lender groups will be reaching out shortly. Below are some rate options for your review.
+              </p>
+            </td>
+          </tr>
 
-              <!-- Hero section -->
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+          <!-- ══════════ SPACER ══════════ -->
+          <tr><td style="height:8px;"></td></tr>
+
+          <!-- ═══════════════════════════════════ -->
+          <!-- LENDER CARD 1 — Five Star Mortgage  -->
+          <!-- ═══════════════════════════════════ -->
+          <tr>
+            <td style="padding:0 16px 12px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1.5px solid #6366f1;border-radius:14px;overflow:hidden;background-color:#ffffff;">
+
+                <!-- Card header -->
                 <tr>
-                  <td class="content-wrap" style="padding: 36px 32px 28px;">
-
-                    <!-- Status badge -->
-                    <div style="display:inline-flex; align-items:center; background-color:#f0fdf4; border:1px solid #bbf7d0; border-radius:100px; padding:6px 14px; margin-bottom:20px;">
-                      <span style="display:inline-block; width:8px; height:8px; background-color:#22c55e; border-radius:50%; margin-right:8px;"></span>
-                      <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:12px; font-weight:600; color:#15803d; letter-spacing:0.3px; text-transform:uppercase;">
-                        Alert Active
-                      </span>
-                    </div>
-
-                    <!-- Headline -->
-                    <h1 class="hero-headline" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:28px; font-weight:800; color:#0f172a; line-height:1.25; letter-spacing:-0.5px; margin:0 0 12px 0;">
-                      {{first_name}}, we're watching rates for you
-                    </h1>
-
-                    <!-- Subline -->
-                    <p class="hero-sub" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:16px; color:#64748b; line-height:1.6; margin:0;">
-                      You're all set. We'll notify you the moment a lender hits your target — no refreshing, no guessing.
-                    </p>
-
-                  </td>
-                </tr>
-
-                <!-- ---- Rate Cards Grid ---- -->
-                <tr>
-                  <td class="content-wrap" style="padding: 0 32px 24px;">
-                    <table class="rate-card-grid" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <td style="padding:14px 14px 12px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                       <tr>
-                        <!-- Your Target Rate -->
-                        <td class="rate-card" width="48%" style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:18px 20px; vertical-align:top;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; font-weight:600; color:#94a3b8; letter-spacing:0.8px; text-transform:uppercase; margin:0 0 8px 0;">
-                            Your Target Rate
-                          </p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:34px; font-weight:800; color:#0f172a; margin:0; letter-spacing:-1px;">
-                            {{target_rate}}
-                          </p>
+                        <!-- Lender logo + name -->
+                        <td style="vertical-align:middle;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:10px;">
+                                <!-- Five Star Mortgage Logo -->
+                                <div style="width:40px;height:40px;background-color:#eff6ff;border-radius:8px;display:inline-block;text-align:center;line-height:40px;font-size:20px;overflow:hidden;">
+                                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="8" fill="#EFF6FF"/>
+                                    <polygon points="20,8 22.9,16.2 31.5,16.2 24.8,21.4 27.3,29.6 20,24.8 12.7,29.6 15.2,21.4 8.5,16.2 17.1,16.2" fill="#2563EB"/>
+                                  </svg>
+                                </div>
+                              </td>
+                              <td style="vertical-align:middle;">
+                                <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:700;color:#0f172a;margin:0;line-height:1.2;">Five Star Mortgage</p>
+                                <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;color:#94a3b8;margin:3px 0 0 0;">NMLS #1234567</p>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
-                        <td width="4%"></td>
-                        <!-- Best Rate Today -->
-                        <td class="rate-card" width="48%" style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:18px 20px; vertical-align:top;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; font-weight:600; color:#94a3b8; letter-spacing:0.8px; text-transform:uppercase; margin:0 0 8px 0;">
-                            Best Rate Today
-                          </p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:34px; font-weight:800; color:#0f172a; margin:0; letter-spacing:-1px;">
-                            {{best_rate_today}}
-                          </p>
+                        <!-- Star rating -->
+                        <td align="right" style="vertical-align:middle;white-space:nowrap;">
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#f59e0b;font-weight:700;">★</span>
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#0f172a;font-weight:700;"> 4.5</span>
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;"> (505)</span>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
 
-                <!-- ---- Status Banner ---- -->
-                <!-- Conditional: show green banner if target is available, blue if monitoring -->
-                <tr>
-                  <td class="content-wrap" style="padding: 0 32px 28px;">
-                    <!-- GREEN VERSION: target rate available -->
-                    <!--
-                    <div style="background-color:#f0fdf4; border:1px solid #86efac; border-radius:12px; padding:14px 18px;">
-                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; font-weight:600; color:#15803d; margin:0; line-height:1.5;">
-                        🎯 Your target rate is available right now — it's a great time to compare offers.
-                      </p>
-                    </div>
-                    -->
-                    <!-- BLUE/DEFAULT VERSION: actively monitoring -->
-                    <div style="background-color:#eef2ff; border:1px solid #c7d2fe; border-radius:12px; padding:14px 18px;">
-                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; font-weight:500; color:#3730a3; margin:0; line-height:1.5;">
-                        We're actively scanning lenders for your rate. You'll get an alert the second it's available.
-                      </p>
-                    </div>
-                  </td>
-                </tr>
+                <!-- Thin divider -->
+                <tr><td style="height:1px;background-color:#e2e8f0;"></td></tr>
 
-                <!-- ---- Divider ---- -->
+                <!-- Rate + APR -->
                 <tr>
-                  <td style="padding: 0 32px;">
-                    <div style="height:1px; background-color:#f1f5f9;"></div>
-                  </td>
-                </tr>
-
-                <!-- ---- Today's Lender Rates ---- -->
-                <tr>
-                  <td class="content-wrap" style="padding: 28px 32px 0;">
-                    <h2 style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:17px; font-weight:700; color:#0f172a; margin:0 0 16px 0;">
-                      Today's rates for your scenario
-                    </h2>
-
-                    <!-- Lender Card -->
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; overflow:hidden;">
+                  <td style="padding:12px 14px 10px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                       <tr>
-                        <td style="padding:18px 20px;">
-                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <td width="50%" style="vertical-align:top;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:0.6px;text-transform:uppercase;margin:0 0 4px 0;">Rate</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:26px;font-weight:800;color:#0f172a;margin:0;letter-spacing:-0.8px;">5.875%</p>
+                        </td>
+                        <td width="50%" style="vertical-align:top;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:0.6px;text-transform:uppercase;margin:0 0 4px 0;">APR</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:26px;font-weight:800;color:#0f172a;margin:0;letter-spacing:-0.8px;">6.125%</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Loan details row 1 -->
+                <tr>
+                  <td style="padding:0 14px 8px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                             <tr>
-                              <!-- Lender Info -->
-                              <td class="lender-meta" style="vertical-align:middle;">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                  <tr>
-                                    <td style="vertical-align:middle; padding-right:12px;">
-                                      <!-- Lender icon placeholder -->
-                                      <div style="width:44px; height:44px; background-color:#e0e7ff; border-radius:10px; display:inline-block; line-height:44px; text-align:center;">
-                                        <span style="font-size:18px;">🏦</span>
-                                      </div>
-                                    </td>
-                                    <td style="vertical-align:middle;">
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:15px; font-weight:700; color:#0f172a; margin:0 0 2px 0;">Reliant Home Funding</p>
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:12px; color:#94a3b8; margin:0;">NMLS #292473</p>
-                                    </td>
-                                  </tr>
-                                </table>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="1" y="2" width="12" height="11" rx="1.5" stroke="#94A3B8" stroke-width="1.2" fill="none"/>
+                                  <line x1="1" y1="5.5" x2="13" y2="5.5" stroke="#94A3B8" stroke-width="1.2"/>
+                                  <line x1="4" y1="1" x2="4" y2="4" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+                                  <line x1="10" y1="1" x2="10" y2="4" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+                                </svg>
                               </td>
-                              <!-- Lender Stats -->
-                              <td class="lender-stats" align="right" style="vertical-align:middle; white-space:nowrap;">
-                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
-                                  <tr>
-                                    <td class="stat-item" style="text-align:center; padding-left:16px;">
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:18px; font-weight:800; color:#0f172a; margin:0;">5.5%</p>
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0; letter-spacing:0.3px;">Rate</p>
-                                    </td>
-                                    <td class="stat-item" style="text-align:center; padding-left:16px;">
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:18px; font-weight:800; color:#0f172a; margin:0;">5.78%</p>
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0; letter-spacing:0.3px;">APR</p>
-                                    </td>
-                                    <td class="stat-item" style="text-align:center; padding-left:16px;">
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:18px; font-weight:800; color:#0f172a; margin:0;">1.994</p>
-                                      <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0; letter-spacing:0.3px;">Points</p>
-                                    </td>
-                                  </tr>
-                                </table>
+                              <td>
+                                <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">30-year fixed</span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7 1.5L1.5 6v6h4V8h3v4h4V6z" stroke="#94A3B8" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+                                </svg>
+                              </td>
+                              <td>
+                                <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">Conventional</span>
                               </td>
                             </tr>
                           </table>
                         </td>
                       </tr>
                     </table>
-
-                    <!-- More rates tease -->
-                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:13px; color:#94a3b8; margin:10px 0 0 0; text-align:center;">
-                      + more lenders updating throughout the day
-                    </p>
-
                   </td>
                 </tr>
 
-                <!-- ---- Divider ---- -->
+                <!-- Loan details row 2 -->
                 <tr>
-                  <td style="padding: 28px 32px 0;">
-                    <div style="height:1px; background-color:#f1f5f9;"></div>
-                  </td>
-                </tr>
-
-                <!-- ========== CTA BLOCK ========== -->
-                <tr>
-                  <td class="content-wrap" style="padding: 28px 32px;">
-                    <!-- CTA Card -->
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); border-radius:16px; overflow:hidden;">
-                      <tr>
-                        <td style="padding: 28px 24px 32px;">
-
-                          <h2 style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:20px; font-weight:800; color:#ffffff; margin:0 0 10px 0; letter-spacing:-0.3px;">
-                            Ready to lock something in?
-                          </h2>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; color:rgba(255,255,255,0.8); line-height:1.6; margin:0 0 24px 0;">
-                            Verify your phone and our lender partners will reach out with personalized quotes for your exact scenario.
-                          </p>
-
-                          <!-- CTA Button -->
-                          <a href="{{verify_phone_url}}" class="cta-btn" style="display:block; background-color:#ffffff; color:#4f46e5; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:16px; font-weight:700; text-align:center; text-decoration:none; padding:15px 24px; border-radius:12px; letter-spacing:-0.2px;">
-                            Get My Personalized Quotes →
-                          </a>
-
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-
-                <!-- ---- Divider ---- -->
-                <tr>
-                  <td style="padding: 0 32px;">
-                    <div style="height:1px; background-color:#f1f5f9;"></div>
-                  </td>
-                </tr>
-
-                <!-- ========== HOW IT WORKS ========== -->
-                <tr>
-                  <td class="content-wrap" style="padding: 28px 32px 32px;">
-
-                    <h2 style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:17px; font-weight:700; color:#0f172a; margin:0 0 20px 0;">
-                      What happens next
-                    </h2>
-
-                    <!-- Step 1 -->
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:16px;">
-                      <tr class="step-row">
-                        <td class="step-icon-cell" width="44" style="vertical-align:top; padding-right:14px; padding-top:2px;">
-                          <div style="width:36px; height:36px; background-color:#ede9fe; border-radius:10px; text-align:center; line-height:36px; font-size:16px;">
-                            📡
-                          </div>
-                        </td>
-                        <td style="vertical-align:top;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:15px; font-weight:700; color:#0f172a; margin:0 0 3px 0;">We scan lenders 24/7</p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; color:#64748b; margin:0; line-height:1.5;">Our system monitors rates across dozens of lenders in real time, every day.</p>
-                        </td>
-                      </tr>
-                    </table>
-
-                    <!-- Step 2 -->
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:16px;">
-                      <tr class="step-row">
-                        <td class="step-icon-cell" width="44" style="vertical-align:top; padding-right:14px; padding-top:2px;">
-                          <div style="width:36px; height:36px; background-color:#fef3c7; border-radius:10px; text-align:center; line-height:36px; font-size:16px;">
-                            🔔
-                          </div>
-                        </td>
-                        <td style="vertical-align:top;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:15px; font-weight:700; color:#0f172a; margin:0 0 3px 0;">You get alerted instantly</p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; color:#64748b; margin:0; line-height:1.5;">The moment a lender hits {{target_rate}}, you'll hear from us — via email and text.</p>
-                        </td>
-                      </tr>
-                    </table>
-
-                    <!-- Step 3 -->
+                  <td style="padding:0 14px 12px;">
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                      <tr class="step-row">
-                        <td class="step-icon-cell" width="44" style="vertical-align:top; padding-right:14px; padding-top:2px;">
-                          <div style="width:36px; height:36px; background-color:#dcfce7; border-radius:10px; text-align:center; line-height:36px; font-size:16px;">
-                            🤝
-                          </div>
+                      <tr>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <polyline points="1.5,9.5 4.5,5.5 7,7.5 9.5,3.5 12.5,5" stroke="#94A3B8" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </td>
+                              <td>
+                                <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">0.57 Points</span>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
-                        <td style="vertical-align:top;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:15px; font-weight:700; color:#0f172a; margin:0 0 3px 0;">Lock in with confidence</p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:14px; color:#64748b; margin:0; line-height:1.5;">Compare real quotes from vetted lenders. No pressure, no hidden fees.</p>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="7" cy="7" r="5.5" stroke="#94A3B8" stroke-width="1.2" fill="none"/>
+                                  <text x="7" y="10.5" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#94A3B8">$</text>
+                                </svg>
+                              </td>
+                              <td>
+                                <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">$1,596 Fees</span>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
                       </tr>
                     </table>
+                  </td>
+                </tr>
 
+                <!-- CTA -->
+                <tr>
+                  <td style="padding:0 0 0 0;">
+                    <a href="#" style="display:block;background-color:#4338ca;color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;font-weight:700;text-align:center;text-decoration:none;padding:14px 16px;border-radius:0 0 12px 12px;letter-spacing:0.1px;">
+                      See all details &amp; more rates &nbsp;→
+                    </a>
                   </td>
                 </tr>
 
               </table>
-              <!-- end main card inner table -->
-
             </td>
           </tr>
-          <!-- end main card row -->
 
-          <!-- ========== SOCIAL PROOF BAR ========== -->
+          <!-- ═══════════════════════════════════ -->
+          <!-- LENDER CARD 2 — BlueSpot Home Loans -->
+          <!-- ═══════════════════════════════════ -->
           <tr>
-            <td style="padding: 20px 0;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff; border-radius:14px; overflow:hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.05);">
+            <td style="padding:0 16px 12px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1.5px solid #6366f1;border-radius:14px;overflow:hidden;background-color:#ffffff;">
+
                 <tr>
-                  <td style="padding: 18px 24px;">
+                  <td style="padding:14px 14px 12px;">
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                       <tr>
-                        <td width="33%" style="text-align:center; padding: 0 8px;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:20px; font-weight:800; color:#0f172a; margin:0 0 2px 0;">50K+</p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0;">Alerts sent</p>
+                        <td style="vertical-align:middle;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:10px;">
+                                <!-- BlueSpot Logo -->
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect width="40" height="40" rx="8" fill="#ECFDF5"/>
+                                  <circle cx="20" cy="20" r="10" fill="#059669"/>
+                                  <circle cx="20" cy="16" r="5" fill="#ECFDF5"/>
+                                  <ellipse cx="20" cy="26" rx="7" ry="4" fill="#ECFDF5"/>
+                                </svg>
+                              </td>
+                              <td style="vertical-align:middle;">
+                                <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:700;color:#0f172a;margin:0;line-height:1.2;">BlueSpot Home Loans</p>
+                                <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;color:#94a3b8;margin:3px 0 0 0;">NMLS #2098431</p>
+                              </td>
+                            </tr>
+                          </table>
                         </td>
-                        <td width="33%" style="text-align:center; padding: 0 8px; border-left:1px solid #f1f5f9; border-right:1px solid #f1f5f9;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:20px; font-weight:800; color:#0f172a; margin:0 0 2px 0;">40+</p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0;">Lender partners</p>
-                        </td>
-                        <td width="33%" style="text-align:center; padding: 0 8px;">
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:20px; font-weight:800; color:#0f172a; margin:0 0 2px 0;">Free</p>
-                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0;">Always</p>
+                        <td align="right" style="vertical-align:middle;white-space:nowrap;">
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#f59e0b;font-weight:700;">★</span>
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#0f172a;font-weight:700;"> 4.5</span>
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;"> (505)</span>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
+
+                <tr><td style="height:1px;background-color:#e2e8f0;"></td></tr>
+
+                <tr>
+                  <td style="padding:12px 14px 10px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%" style="vertical-align:top;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:0.6px;text-transform:uppercase;margin:0 0 4px 0;">Rate</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:26px;font-weight:800;color:#0f172a;margin:0;letter-spacing:-0.8px;">5.875%</p>
+                        </td>
+                        <td width="50%" style="vertical-align:top;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:0.6px;text-transform:uppercase;margin:0 0 4px 0;">APR</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:26px;font-weight:800;color:#0f172a;margin:0;letter-spacing:-0.8px;">6.125%</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:0 14px 8px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="1" y="2" width="12" height="11" rx="1.5" stroke="#94A3B8" stroke-width="1.2" fill="none"/>
+                                  <line x1="1" y1="5.5" x2="13" y2="5.5" stroke="#94A3B8" stroke-width="1.2"/>
+                                  <line x1="4" y1="1" x2="4" y2="4" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+                                  <line x1="10" y1="1" x2="10" y2="4" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">30-year fixed</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7 1.5L1.5 6v6h4V8h3v4h4V6z" stroke="#94A3B8" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">Conventional</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:0 14px 12px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <polyline points="1.5,9.5 4.5,5.5 7,7.5 9.5,3.5 12.5,5" stroke="#94A3B8" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">0.57 Points</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="7" cy="7" r="5.5" stroke="#94A3B8" stroke-width="1.2" fill="none"/>
+                                  <text x="7" y="10.5" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#94A3B8">$</text>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">$1,596 Fees</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="#" style="display:block;background-color:#4338ca;color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;font-weight:700;text-align:center;text-decoration:none;padding:14px 16px;border-radius:0 0 12px 12px;letter-spacing:0.1px;">
+                      See all details &amp; more rates &nbsp;→
+                    </a>
+                  </td>
+                </tr>
+
               </table>
             </td>
           </tr>
 
-          <!-- ========== FOOTER ========== -->
+          <!-- ═══════════════════════════════ -->
+          <!-- LENDER CARD 3 — Watermark       -->
+          <!-- ═══════════════════════════════ -->
           <tr>
-            <td style="padding: 8px 8px 0;">
+            <td style="padding:0 16px 20px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1.5px solid #6366f1;border-radius:14px;overflow:hidden;background-color:#ffffff;">
+
+                <tr>
+                  <td style="padding:14px 14px 12px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="vertical-align:middle;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:10px;">
+                                <!-- Watermark Logo -->
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect width="40" height="40" rx="8" fill="#F8FAFC"/>
+                                  <!-- Stylized W made of vertical bars -->
+                                  <rect x="8" y="11" width="3" height="14" rx="1.5" fill="#1e293b"/>
+                                  <rect x="13" y="11" width="3" height="14" rx="1.5" fill="#1e293b"/>
+                                  <rect x="18" y="11" width="3" height="14" rx="1.5" fill="#1e293b"/>
+                                  <rect x="23" y="11" width="3" height="14" rx="1.5" fill="#1e293b"/>
+                                  <rect x="28" y="11" width="3" height="14" rx="1.5" fill="#1e293b"/>
+                                  <!-- Connecting base line -->
+                                  <rect x="8" y="27" width="23" height="2" rx="1" fill="#1e293b"/>
+                                </svg>
+                              </td>
+                              <td style="vertical-align:middle;">
+                                <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;font-weight:700;color:#0f172a;margin:0;line-height:1.2;">Watermark</p>
+                                <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;color:#94a3b8;margin:3px 0 0 0;">NMLS #1850369</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td align="right" style="vertical-align:middle;white-space:nowrap;">
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#f59e0b;font-weight:700;">★</span>
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#0f172a;font-weight:700;"> 4.5</span>
+                          <span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;"> (505)</span>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr><td style="height:1px;background-color:#e2e8f0;"></td></tr>
+
+                <tr>
+                  <td style="padding:12px 14px 10px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%" style="vertical-align:top;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:0.6px;text-transform:uppercase;margin:0 0 4px 0;">Rate</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:26px;font-weight:800;color:#0f172a;margin:0;letter-spacing:-0.8px;">5.875%</p>
+                        </td>
+                        <td width="50%" style="vertical-align:top;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:0.6px;text-transform:uppercase;margin:0 0 4px 0;">APR</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:26px;font-weight:800;color:#0f172a;margin:0;letter-spacing:-0.8px;">6.125%</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:0 14px 8px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="1" y="2" width="12" height="11" rx="1.5" stroke="#94A3B8" stroke-width="1.2" fill="none"/>
+                                  <line x1="1" y1="5.5" x2="13" y2="5.5" stroke="#94A3B8" stroke-width="1.2"/>
+                                  <line x1="4" y1="1" x2="4" y2="4" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+                                  <line x1="10" y1="1" x2="10" y2="4" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">30-year fixed</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7 1.5L1.5 6v6h4V8h3v4h4V6z" stroke="#94A3B8" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">Conventional</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:0 14px 12px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <polyline points="1.5,9.5 4.5,5.5 7,7.5 9.5,3.5 12.5,5" stroke="#94A3B8" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">0.57 Points</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width="50%">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="vertical-align:middle;padding-right:5px;">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="7" cy="7" r="5.5" stroke="#94A3B8" stroke-width="1.2" fill="none"/>
+                                  <text x="7" y="10.5" text-anchor="middle" font-family="Arial" font-size="7" font-weight="bold" fill="#94A3B8">$</text>
+                                </svg>
+                              </td>
+                              <td><span style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;font-weight:500;">$1,596 Fees</span></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <a href="#" style="display:block;background-color:#4338ca;color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;font-weight:700;text-align:center;text-decoration:none;padding:14px 16px;border-radius:0 0 12px 12px;letter-spacing:0.1px;">
+                      See all details &amp; more rates &nbsp;→
+                    </a>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <!-- ══════════════════════════ -->
+          <!-- YOUR SCENARIO SECTION     -->
+          <!-- ══════════════════════════ -->
+          <tr>
+            <td style="padding:0 16px 24px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                <!-- Section header -->
+                <tr>
+                  <td style="padding:0 0 16px 0;">
+                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;font-weight:800;color:#0f172a;margin:0;">Your scenario</p>
+                  </td>
+                </tr>
+
+                <!-- House icon + property type -->
+                <tr>
+                  <td style="padding:0 0 16px 0;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td style="vertical-align:middle;padding-right:12px;">
+                          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="44" height="44" rx="10" fill="#EEF2FF"/>
+                            <path d="M22 9L8 21h4v12h8v-7h4v7h8V21h4L22 9z" stroke="#4338CA" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                          </svg>
+                        </td>
+                        <td style="vertical-align:middle;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">Single family home</p>
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:13px;color:#64748b;margin:2px 0 0 0;">in California</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Thin divider -->
+                <tr><td style="height:1px;background-color:#e2e8f0;margin-bottom:14px;"></td></tr>
+                <tr><td style="height:14px;"></td></tr>
+
+                <!-- Scenario grid -->
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                      <!-- Row 1 values -->
+                      <tr>
+                        <td width="50%" style="vertical-align:top;padding-bottom:4px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">Primary home</p>
+                        </td>
+                        <td width="50%" style="vertical-align:top;padding-bottom:4px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">$85,000 <span style="color:#64748b;font-size:13px;font-weight:500;">(15.1%)</span></p>
+                        </td>
+                      </tr>
+                      <!-- Row 1 labels -->
+                      <tr>
+                        <td width="50%" style="padding-bottom:14px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;margin:0;">Property usage</p>
+                        </td>
+                        <td width="50%" style="padding-bottom:14px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;margin:0;">Est. down payment</p>
+                        </td>
+                      </tr>
+
+                      <!-- Row 2 values -->
+                      <tr>
+                        <td width="50%" style="vertical-align:top;padding-bottom:4px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">$720</p>
+                        </td>
+                        <td width="50%" style="vertical-align:top;padding-bottom:4px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">$465,000</p>
+                        </td>
+                      </tr>
+                      <!-- Row 2 labels -->
+                      <tr>
+                        <td width="50%" style="padding-bottom:14px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;margin:0;">Credit score</p>
+                        </td>
+                        <td width="50%" style="padding-bottom:14px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;margin:0;">Purchase price</p>
+                        </td>
+                      </tr>
+
+                      <!-- Row 3 values -->
+                      <tr>
+                        <td width="50%" style="vertical-align:top;padding-bottom:4px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">Conventional</p>
+                        </td>
+                        <td width="50%" style="vertical-align:top;padding-bottom:4px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:700;color:#0f172a;margin:0;">Purchase</p>
+                        </td>
+                      </tr>
+                      <!-- Row 3 labels -->
+                      <tr>
+                        <td width="50%" style="padding-bottom:18px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;margin:0;">Loan type</p>
+                        </td>
+                        <td width="50%" style="padding-bottom:18px;">
+                          <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#94a3b8;margin:0;">Loan purpose</p>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Adjust preferences link -->
+                <tr>
+                  <td>
+                    <a href="#" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;font-weight:600;color:#4338ca;text-decoration:none;">
+                      Adjust your preferences &nbsp;›
+                    </a>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <!-- ══════════════ -->
+          <!-- FOOTER         -->
+          <!-- ══════════════ -->
+          <tr>
+            <td style="border-top:1px solid #e2e8f0;padding:24px 16px 0;">
+
+              <!-- Footer logo -->
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                 <tr>
-                  <td style="text-align:center; padding-bottom:16px;">
-                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:13px; font-weight:700; color:#0f172a; margin:0 0 4px 0;">
-                      rates<span style="color:#4f46e5;">.</span>now
-                    </p>
-                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; margin:0;">
-                      123 Main Street, Suite 100, New York, NY 10001
+                  <td align="center" style="padding-bottom:10px;">
+                    <img src="VArateslogo.png" width="120" alt="VA rates.now" style="width:120px;height:auto;display:block;margin:0 auto;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom:16px;">
+                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#64748b;margin:0;">©2026 Rates.Now. All rights reserved.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom:16px;">
+                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:10px;color:#94a3b8;line-height:1.65;text-align:center;margin:0;">
+                      varates.now and rates.now are not mortgage lenders or brokers. We are a loan education and comparison network that helps Veterans and military families understand their VA home loan benefits and compare offers from multiple VA-approved lenders side by side. We do not originate loans, make credit decisions, or issue approvals. All rates, fees, terms, and loan decisions are provided solely by participating lenders.<br><br>
+                      varates.now and rates.now are not affiliated with the U.S. Department of Veterans Affairs (VA), the Department of Defense (DoD), or any government agency. Information on these sites is provided for educational purposes only and should not be considered legal, financial, or tax advice. Official VA resources are available at va.gov.
                     </p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="text-align:center; padding-bottom:12px;">
-                    <a href="{{privacy_url}}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; text-decoration:underline; margin: 0 8px;">Privacy Policy</a>
-                    <a href="{{terms_url}}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; text-decoration:underline; margin: 0 8px;">Terms of Service</a>
-                    <a href="{{unsubscribe_url}}" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:11px; color:#94a3b8; text-decoration:underline; margin: 0 8px;">Unsubscribe</a>
+                  <td align="center" style="padding-bottom:10px;">
+                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;margin:0;">
+                      Need help? <a href="#" style="color:#4338ca;text-decoration:none;font-weight:600;">Contact support</a>
+                    </p>
                   </td>
                 </tr>
                 <tr>
-                  <td style="text-align:center; padding-bottom:32px;">
-                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; font-size:10px; color:#cbd5e1; line-height:1.6; margin:0; max-width:480px; display:block; margin:0 auto;">
-                      You're receiving this email because you submitted your information at rates.now on {{signup_date}}. rates.now is not a lender. Rates shown are examples and may not reflect current market conditions. Lender NMLS information available upon request. Message and data rates may apply for text alerts. Reply STOP to unsubscribe from texts.
+                  <td align="center" style="padding-bottom:16px;">
+                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;color:#475569;margin:0;">
+                      Avoid spam: <a href="#" style="color:#4338ca;text-decoration:none;font-weight:600;">Add us to your address book</a>
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-bottom:32px;">
+                    <p style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;color:#94a3b8;margin:0;">
+                      <a href="#" style="color:#94a3b8;text-decoration:underline;">Unsubscribe</a>
+                      &nbsp;|&nbsp;
+                      <a href="#" style="color:#94a3b8;text-decoration:underline;">View in browser</a>
+                      &nbsp;|&nbsp;
+                      <a href="#" style="color:#94a3b8;text-decoration:underline;">Send less email</a>
                     </p>
                   </td>
                 </tr>
               </table>
+
             </td>
           </tr>
 
@@ -409,7 +687,6 @@
       </td>
     </tr>
   </table>
-  <!-- end outer wrapper -->
 
 </body>
 </html>

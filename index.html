@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Email Preview — rates.now</title>
+  <title>Email Preview — VA rates.now</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -21,351 +21,291 @@
       background-color: #1e293b;
       border-bottom: 1px solid #334155;
       padding: 0 24px;
-      height: 56px;
+      height: 52px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
     }
-    .topbar-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .logo {
-      font-size: 16px;
+    .topbar-left { display: flex; align-items: center; gap: 12px; }
+    .logo-text {
+      font-size: 15px;
       font-weight: 800;
       color: #f8fafc;
-      letter-spacing: -0.4px;
+      letter-spacing: -0.3px;
     }
-    .logo span { color: #818cf8; }
+    .logo-text span { color: #818cf8; }
     .badge {
       background-color: #312e81;
       color: #a5b4fc;
       font-size: 11px;
       font-weight: 600;
-      padding: 3px 9px;
+      padding: 3px 10px;
       border-radius: 100px;
-      letter-spacing: 0.3px;
     }
-    .topbar-right {
-      display: flex;
+    .topbar-right { display: flex; align-items: center; gap: 8px; }
+    .top-btn {
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-    }
-    .view-tab {
-      background: none;
+      gap: 5px;
       border: 1px solid #334155;
+      background: none;
       color: #94a3b8;
       font-size: 12px;
       font-weight: 500;
       padding: 5px 12px;
       border-radius: 8px;
       cursor: pointer;
-      transition: all 0.15s;
+      text-decoration: none;
       font-family: inherit;
     }
-    .view-tab.active, .view-tab:hover {
-      background-color: #4f46e5;
-      border-color: #4f46e5;
-      color: #ffffff;
-    }
+    .top-btn:hover { border-color: #6366f1; color: #e2e8f0; }
 
-    /* ── Main layout ── */
+    /* ── Stage ── */
     .stage {
       display: flex;
-      min-height: calc(100vh - 56px);
+      min-height: calc(100vh - 52px);
     }
 
     /* ── Left panel ── */
     .info-panel {
-      width: 280px;
+      width: 260px;
       flex-shrink: 0;
       background-color: #1e293b;
       border-right: 1px solid #334155;
-      padding: 24px 20px;
+      padding: 24px 18px;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 22px;
     }
-    @media (max-width: 900px) { .info-panel { display: none; } }
+    @media (max-width: 860px) { .info-panel { display: none; } }
 
-    .panel-section h3 {
-      font-size: 11px;
+    .panel-label {
+      font-size: 10px;
       font-weight: 600;
       color: #475569;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      display: block;
     }
-    .meta-row {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .meta-label {
-      font-size: 11px;
-      color: #475569;
-      font-weight: 500;
-    }
-    .meta-value {
-      font-size: 13px;
-      color: #e2e8f0;
-      font-weight: 500;
-    }
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
+    .meta-stack { display: flex; flex-direction: column; gap: 9px; }
+    .meta-item { display: flex; flex-direction: column; gap: 1px; }
+    .meta-key { font-size: 11px; color: #475569; }
+    .meta-val { font-size: 13px; color: #e2e8f0; font-weight: 500; }
+
+    .tag-wrap { display: flex; flex-wrap: wrap; gap: 5px; }
     .tag {
       background-color: #0f172a;
       border: 1px solid #334155;
       color: #94a3b8;
-      font-size: 11px;
+      font-size: 10px;
       padding: 3px 8px;
       border-radius: 6px;
+      font-family: 'SFMono-Regular', Consolas, monospace;
     }
-    .divider {
-      height: 1px;
-      background-color: #1e293b;
-      border: none;
-      margin: 0;
-    }
-    .download-btn {
+
+    .dl-btn {
       display: block;
       width: 100%;
       background-color: #4f46e5;
-      color: #ffffff;
+      color: #fff;
       font-family: inherit;
       font-size: 13px;
       font-weight: 600;
       text-align: center;
-      padding: 10px 16px;
+      padding: 10px;
       border-radius: 10px;
       text-decoration: none;
-      border: none;
-      cursor: pointer;
-      margin-top: 4px;
     }
-    .open-btn {
+    .raw-btn {
       display: block;
       width: 100%;
-      background-color: transparent;
+      background: none;
       border: 1px solid #334155;
       color: #94a3b8;
       font-family: inherit;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 500;
       text-align: center;
-      padding: 10px 16px;
+      padding: 9px;
       border-radius: 10px;
       text-decoration: none;
-      cursor: pointer;
-      margin-top: 8px;
+      margin-top: 7px;
     }
 
-    /* ── Preview canvas ── */
+    /* ── Canvas ── */
     .canvas {
       flex: 1;
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      padding: 40px 24px 60px;
+      padding: 36px 24px 56px;
       overflow-y: auto;
     }
 
-    /* ── Mobile phone frame ── */
-    .phone-wrap {
-      position: relative;
-    }
+    /* ── Phone frame — 370px inner screen ── */
     .phone-frame {
       position: relative;
-      width: 393px;
-      background-color: #000000;
-      border-radius: 52px;
-      padding: 14px;
+      /* screen = 370px, padding = 13px each side → outer = 396px */
+      width: 396px;
+      background-color: #000;
+      border-radius: 50px;
+      padding: 13px;
       box-shadow:
         0 0 0 1px #1e293b,
-        0 0 0 3px #334155,
-        0 40px 80px rgba(0,0,0,0.6),
-        inset 0 0 0 1px #1e293b;
+        0 0 0 2.5px #475569,
+        0 40px 90px rgba(0,0,0,0.7),
+        inset 0 0 0 1px #1a1a1a;
+      flex-shrink: 0;
     }
+
     /* Dynamic island */
     .dynamic-island {
       position: absolute;
-      top: 26px;
+      top: 22px;
       left: 50%;
       transform: translateX(-50%);
-      width: 120px;
-      height: 34px;
-      background-color: #000000;
-      border-radius: 20px;
+      width: 110px;
+      height: 32px;
+      background-color: #000;
+      border-radius: 18px;
       z-index: 10;
     }
+
+    /* Screen: exactly 370px wide */
     .phone-screen {
-      border-radius: 42px;
+      width: 370px;
+      border-radius: 38px;
       overflow: hidden;
-      background-color: #eef2f7;
-      position: relative;
+      background-color: #ffffff;
     }
-    /* Status bar spacer */
+
     .status-bar {
-      height: 54px;
-      background-color: #eef2f7;
+      height: 50px;
+      background-color: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 20px 8px;
     }
+    .status-time {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
     .email-iframe {
-      width: 100%;
+      width: 370px;
       border: none;
       display: block;
-      min-height: 800px;
     }
-    /* Home indicator */
-    .home-indicator {
+
+    .home-bar {
       height: 28px;
-      background-color: #000;
+      background-color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .home-bar {
+    .home-indicator {
       width: 120px;
       height: 5px;
-      background-color: #444;
+      background-color: #1a1a1a;
       border-radius: 3px;
     }
-
-    /* ── Desktop frame ── */
-    .desktop-frame {
-      display: none;
-      width: 100%;
-      max-width: 680px;
-      background-color: #1e293b;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-    }
-    .desktop-titlebar {
-      height: 36px;
-      background-color: #334155;
-      display: flex;
-      align-items: center;
-      padding: 0 14px;
-      gap: 8px;
-    }
-    .dot { width: 12px; height: 12px; border-radius: 50%; }
-    .dot-r { background-color: #ff5f57; }
-    .dot-y { background-color: #ffbd2e; }
-    .dot-g { background-color: #28c840; }
-    .desktop-inner {
-      background-color: #eef2f7;
-      padding: 0;
-    }
-    .desktop-iframe {
-      width: 100%;
-      border: none;
-      display: block;
-      height: 900px;
-    }
-
-    /* Active states for view toggle */
-    body.view-desktop .phone-wrap { display: none; }
-    body.view-desktop .desktop-frame { display: block; }
-    body.view-mobile .phone-wrap { display: block; }
-    body.view-mobile .desktop-frame { display: none; }
 
     /* ── Watermark ── */
     .watermark {
       position: fixed;
-      bottom: 16px;
-      right: 20px;
+      bottom: 14px;
+      right: 18px;
       font-size: 11px;
-      color: #334155;
-      font-weight: 500;
-      letter-spacing: 0.3px;
+      color: #1e293b;
       pointer-events: none;
     }
   </style>
 </head>
-<body class="view-mobile">
+<body>
 
   <!-- Top bar -->
-  <div class="topbar">
+  <header class="topbar">
     <div class="topbar-left">
-      <span class="logo">rates<span>.</span>now</span>
+      <span class="logo-text">VA rates<span>.</span>now</span>
       <span class="badge">Email Preview</span>
     </div>
     <div class="topbar-right">
-      <button class="view-tab active" id="btn-mobile" onclick="setView('mobile')">Mobile</button>
-      <button class="view-tab" id="btn-desktop" onclick="setView('desktop')">Desktop</button>
+      <a href="intro-nurture-email.html" download="varatesnow-email.html" class="top-btn">
+        ↓ Download HTML
+      </a>
+      <a href="intro-nurture-email.html" target="_blank" class="top-btn">
+        ↗ Raw email
+      </a>
     </div>
-  </div>
+  </header>
 
   <!-- Stage -->
   <div class="stage">
 
-    <!-- Left info panel -->
+    <!-- Left panel -->
     <aside class="info-panel">
 
-      <div class="panel-section">
-        <h3>Email Details</h3>
-        <div class="meta-row">
+      <div>
+        <span class="panel-label">Campaign info</span>
+        <div class="meta-stack">
           <div class="meta-item">
-            <span class="meta-label">Campaign type</span>
-            <span class="meta-value">Intro + Nurture</span>
+            <span class="meta-key">Type</span>
+            <span class="meta-val">Intro + Nurture</span>
           </div>
           <div class="meta-item">
-            <span class="meta-label">Trigger</span>
-            <span class="meta-value">Post form submission</span>
+            <span class="meta-key">Trigger</span>
+            <span class="meta-val">Post form submission</span>
           </div>
           <div class="meta-item">
-            <span class="meta-label">Optimized for</span>
-            <span class="meta-value">Mobile (iOS & Android)</span>
+            <span class="meta-key">Target width</span>
+            <span class="meta-val">370px (mobile)</span>
           </div>
           <div class="meta-item">
-            <span class="meta-label">Brand</span>
-            <span class="meta-value">rates.now</span>
+            <span class="meta-key">Sample lead</span>
+            <span class="meta-val">Sreenivasan</span>
           </div>
         </div>
       </div>
 
-      <div class="panel-section">
-        <h3>Merge Tags</h3>
-        <div class="tag-list">
+      <div>
+        <span class="panel-label">Subject lines</span>
+        <div class="meta-stack">
+          <div class="meta-item">
+            <span class="meta-key">Option A</span>
+            <span class="meta-val">Sreenivasan, your recent home loan options from Rates.now</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-key">Option B</span>
+            <span class="meta-val">Your VA loan options are ready — 3 lenders matched</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="panel-label">Merge tags</span>
+        <div class="tag-wrap">
           <span class="tag">{{first_name}}</span>
-          <span class="tag">{{target_rate}}</span>
-          <span class="tag">{{best_rate_today}}</span>
-          <span class="tag">{{dashboard_url}}</span>
-          <span class="tag">{{verify_phone_url}}</span>
-          <span class="tag">{{signup_date}}</span>
+          <span class="tag">{{rate}}</span>
+          <span class="tag">{{apr}}</span>
+          <span class="tag">{{purchase_price}}</span>
+          <span class="tag">{{down_payment}}</span>
+          <span class="tag">{{credit_score}}</span>
+          <span class="tag">{{loan_type}}</span>
+          <span class="tag">{{state}}</span>
         </div>
       </div>
 
-      <div class="panel-section">
-        <h3>Subject Lines</h3>
-        <div class="meta-row">
-          <div class="meta-item">
-            <span class="meta-label">Option A</span>
-            <span class="meta-value">{{first_name}}, your rate alert is live 🔔</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Option B</span>
-            <span class="meta-value">We're watching {{target_rate}} for you</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel-section">
-        <a href="intro-nurture-email.html" download="rates-now-intro-email.html" class="download-btn">
+      <div>
+        <a href="intro-nurture-email.html" download="varatesnow-email.html" class="dl-btn">
           Download HTML
         </a>
-        <a href="intro-nurture-email.html" target="_blank" class="open-btn">
-          Open Raw Email
+        <a href="intro-nurture-email.html" target="_blank" class="raw-btn">
+          Open raw email
         </a>
       </div>
 
@@ -374,41 +314,30 @@
     <!-- Preview canvas -->
     <main class="canvas">
 
-      <!-- Mobile phone frame -->
-      <div class="phone-wrap">
-        <div class="phone-frame">
-          <div class="dynamic-island"></div>
-          <div class="phone-screen">
-            <div class="status-bar"></div>
-            <iframe
-              class="email-iframe"
-              src="intro-nurture-email.html"
-              title="Email preview"
-              scrolling="yes"
-              id="email-iframe"
-              onload="resizeIframe(this)"
-            ></iframe>
-            <div class="home-indicator">
-              <div class="home-bar"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="phone-frame">
+        <div class="dynamic-island"></div>
+        <div class="phone-screen">
 
-      <!-- Desktop frame -->
-      <div class="desktop-frame">
-        <div class="desktop-titlebar">
-          <div class="dot dot-r"></div>
-          <div class="dot dot-y"></div>
-          <div class="dot dot-g"></div>
-        </div>
-        <div class="desktop-inner">
+          <!-- iOS status bar -->
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+          </div>
+
+          <!-- Email iframe at 370px -->
           <iframe
-            class="desktop-iframe"
+            class="email-iframe"
             src="intro-nurture-email.html"
-            title="Email preview desktop"
+            title="Email preview"
             scrolling="yes"
+            id="emailFrame"
+            onload="autoHeight(this)"
           ></iframe>
+
+          <!-- Home bar -->
+          <div class="home-bar">
+            <div class="home-indicator"></div>
+          </div>
+
         </div>
       </div>
 
@@ -416,20 +345,17 @@
 
   </div>
 
-  <div class="watermark">rates.now · for review only</div>
+  <div class="watermark">VA rates.now · for review only</div>
 
   <script>
-    function setView(mode) {
-      document.body.className = 'view-' + mode;
-      document.getElementById('btn-mobile').classList.toggle('active', mode === 'mobile');
-      document.getElementById('btn-desktop').classList.toggle('active', mode === 'desktop');
-    }
-
-    function resizeIframe(iframe) {
+    function autoHeight(iframe) {
       try {
         const doc = iframe.contentDocument || iframe.contentWindow.document;
-        iframe.style.height = doc.documentElement.scrollHeight + 'px';
-      } catch(e) {}
+        const h = doc.documentElement.scrollHeight || doc.body.scrollHeight;
+        iframe.style.height = h + 'px';
+      } catch(e) {
+        iframe.style.height = '1400px';
+      }
     }
   </script>
 
